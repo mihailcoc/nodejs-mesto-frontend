@@ -172,3 +172,5 @@ npm audit fix
 npm audit fix --force
 
 npm run lint
+
+[https://](https://github.com/mihailcoc/nodejs-mesto-frontend/activity?ref=main)
