@@ -12,7 +12,7 @@ node app.ts
 npm init -y
 npm install react-scripts --save
 npm install react-scripts --save-dev
-npm install
+npm install --legacy-peer-deps
 npm fund
 npm audit fix --force
 
@@ -143,6 +143,8 @@ nvm install 14.21.3
 nvm install 16.20.2
 nvm install 18.20.8
 nvm install 20.19.5
+nvm install 22.0.0
+nvm install 23.0.0
 
 
 nvm use 16.20.2
@@ -166,11 +168,27 @@ npm i eslint-plugin-import
 npm install --save-dev eslint @typescript-eslint/parser
 npm install --save-dev eslint @typescript-eslint/eslint-plugin
 
+код из урока
+npm i --save-dev typescript @types/node
+
 npm fund
 npm install
+npm install --force
+npm audit
 npm audit fix
 npm audit fix --force
 
 npm run lint
+npm i jiti
+npx eslint src/**/*.ts
+
+npm run start
 
 [https://](https://github.com/mihailcoc/nodejs-mesto-frontend/activity?ref=main)
+
+git remote add origin https://github.com/mihailcoc/nodejs-mesto-frontend.git
+git push -u origin master
+git push https://github.com/mihailcoc/nodejs-mesto-frontend --fast-forwards
+
+Запустить typescript
+$ npx ts-node app.ts
