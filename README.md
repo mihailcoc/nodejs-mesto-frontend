@@ -167,6 +167,8 @@ npm i eslint-config-airbnb-base
 npm i eslint-plugin-import
 npm install --save-dev eslint @typescript-eslint/parser
 npm install --save-dev eslint @typescript-eslint/eslint-plugin
+npm install --save-dev eslint @typescript-eslint/parser
+npm install --save-dev eslint @typescript-eslint/eslint-plugin
 
 код из урока
 npm i --save-dev typescript @types/node
@@ -182,13 +184,21 @@ npm run lint
 npm i jiti
 npx eslint src/**/*.ts
 
+Настойка ESLint для airbnb
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+npm audit
+npm audit fix
+npm audit fix --force
+
 npm run start
 
 [https://](https://github.com/mihailcoc/nodejs-mesto-frontend/activity?ref=main)
 
 git remote add origin https://github.com/mihailcoc/nodejs-mesto-frontend.git
-git push -u origin master
-git push https://github.com/mihailcoc/nodejs-mesto-frontend --fast-forwards
+
+git push -u origin main
+git checkout -B main
+git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 
 Запустить typescript
 $ npx ts-node app.ts
