@@ -210,6 +210,7 @@ $ npx ts-node app.ts
 
 npm install express
 npm run start
+ npm install react-scripts --save-dev --legacy-peer-deps
 
 
 
