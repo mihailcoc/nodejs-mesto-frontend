@@ -201,7 +201,15 @@ git checkout -B main
 git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 
 git add .
-git commit main
+git commit
+git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 
 Запустить typescript
 $ npx ts-node app.ts
+
+
+npm install express
+npm run start
+
+
+
