@@ -200,5 +200,8 @@ git push -u origin main
 git checkout -B main
 git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 
+git add .
+git commit main
+
 Запустить typescript
 $ npx ts-node app.ts
