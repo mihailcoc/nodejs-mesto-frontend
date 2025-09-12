@@ -93,6 +93,9 @@ npm install
         "allow": [
             "_id"
         ]
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+npx install-peerdeps --dev eslint-config-airbnb-base
+
 
 5. Создайте первый TS-файл
 
@@ -186,9 +189,13 @@ npx eslint src/**/*.ts
 
 Настойка ESLint для airbnb
 npm info "eslint-config-airbnb-base@latest" peerDependencies
+npx install-peerdeps --dev eslint-config-airbnb-base
 npm audit
 npm audit fix
 npm audit fix --force
+
+node use 16
+
 
 npm run start
 
@@ -217,6 +224,8 @@ npm run start
  npm audit
  npm audit fix --force
 npm install  --legacy-peer-deps
-npm install react-scripts --save-dev --legacy-peer-deps
+
+Вот эта команда устанавливает react
+npm install react-scripts@latest
 
 
