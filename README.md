@@ -203,6 +203,7 @@ git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 git add .
 git commit
 git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
+git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
 
 Запустить typescript
 $ npx ts-node app.ts
@@ -213,6 +214,9 @@ npm run start
  npm install react-scripts --save-dev 
  npm install react-scripts --save-dev --force
  npm fund
-
+ npm audit
+ npm audit fix --force
+npm install  --legacy-peer-deps
+npm install react-scripts --save-dev --legacy-peer-deps
 
 

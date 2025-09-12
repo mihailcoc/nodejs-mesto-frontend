@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "express": "^5.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -10,11 +13,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint . --ext .ts"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -35,30 +37,12 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.43.0",
     "dotenv": "^16.0.2",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "or": "^0.2.0",
-    "react-scripts": "^0.0.0",
-    "typescript": "^5.9.2"
+    "react-scripts": "^5.0.1"
   },
   "description": "Спринт 1",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yandex-praktikum/nodejs-mesto-frontend.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yandex-praktikum/nodejs-mesto-frontend/issues"
-  },
-  "homepage": "https://github.com/yandex-praktikum/nodejs-mesto-frontend#readme",
-  "keywords": []
+  "license": "ISC"
 }
