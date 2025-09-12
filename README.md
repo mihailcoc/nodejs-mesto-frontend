@@ -87,27 +87,10 @@ npm run build
 npm install
 
 
-4. Добавьте исключение 
-Согласно стайлгайду Airbnb, в JavaScript не следует использовать нижние подчёркивания для имён идентификаторов, поэтому ESLint будет ругаться на переменную _id в файлах проекта. 
-
-        "allow": [
-            "_id"
-        ]
-npm info "eslint-config-airbnb-base@latest" peerDependencies
-npx install-peerdeps --dev eslint-config-airbnb-base
 
 
-5. Создайте первый TS-файл
 
-const express = require('express');
-const app = express();
-const PORT = 3000;
-app.get('/', (req:any , res:any) => {
-    res.send('<h1>Hello, Geeks!</h1><p>This is your simple Express server.</p>');
-});
-app.listen(PORT, () => {
-    console.log(`Server is listening at http://localhost:${PORT}`);
-});
+
 
 
 Данная команда должна осуществлять запуск проекта без его непосредственной сборки при помощи ts-node.
@@ -161,9 +144,30 @@ npm update -g node
 nvm ls
 
 
-6. Добавьте команду сборки проекта
+Настойка ESLint для airbnb
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+npx install-peerdeps --dev eslint-config-airbnb-base
+
+npm install -g install-peerdeps
+install-peerdeps --dev eslint-config-airbnb-base
 
 ВТОРАЯ ВЕРСИЯ.
+
+npm install express
+npm run start
+ npm install react-scripts --save-dev 
+ npm install react-scripts --save-dev --force
+ npm fund
+ npm audit
+
+npm install  --legacy-peer-deps
+
+Вот эта команда устанавливает react
+npm install react-scripts@latest
+
+npm run build
+
+
 
 Установить зависимость 
 npm i eslint-config-airbnb-base
@@ -212,20 +216,143 @@ git commit
 git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
 
+
+
+
+4. Добавьте исключение 
+Согласно стайлгайду Airbnb, в JavaScript не следует использовать нижние подчёркивания для имён идентификаторов, поэтому ESLint будет ругаться на переменную _id в файлах проекта. 
+
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+npx install-peerdeps --dev eslint-config-airbnb-base
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+
+5. Создайте первый TS-файл
+
+const express = require('express');
+const app = express();
+const PORT = 3000;
+app.get('/', (req:any , res:any) => {
+    res.send('<h1>Hello, Geeks!</h1><p>This is your simple Express server.</p>');
+});
+app.listen(PORT, () => {
+    console.log(`Server is listening at http://localhost:${PORT}`);
+});
+
+
 Запустить typescript
+cd src
 $ npx ts-node app.ts
 
+6. Добавьте команду сборки проекта
 
-npm install express
-npm run start
- npm install react-scripts --save-dev 
- npm install react-scripts --save-dev --force
- npm fund
- npm audit
- npm audit fix --force
+Установить компилятор TypeScript
+npm i -D typescript
+Зависимости typescript 
+npm i -D typescript peerDependencies
+npx install-peerdeps --dev typescript
+
+Зависимости eslint
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+
+npm i eslint-config-airbnb-base
+npx install-peerdeps --dev eslint-config-airbnb-base
+
+npm i eslint-plugin-import
+npx install-peerdeps --dev eslint-plugin-import
+
+npm install --save-dev eslint @typescript-eslint/parser
+npx install-peerdeps --dev @typescript-eslint/parser
+npm install @typescript-eslint/parser@8.43.0 eslint@^9.0.0 typescript@<6.0.0 --save-dev
+
+npm install --save-dev eslint @typescript-eslint/eslint-plugin
+npx install-peerdeps --dev @typescript-eslint/eslint-plugin
+npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 typescript@<6.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
+
+npm fund
+npm audit
+npm audit fix
+
+
+
+
+Зависимости react 
+npm install react-scripts --save-dev --force
+npx install-peerdeps --dev react-dom
+npx install-peerdeps --dev react
+// npx install-peerdeps --dev react-scripts
+
+npm install react-dom@19.1.1 react@^19.1.1 --save-dev
+npm install react-scripts --save-dev --force
+
+
 npm install  --legacy-peer-deps
+npm install
+npm fund
+npm audit
+npm audit fix
 
-Вот эта команда устанавливает react
-npm install react-scripts@latest
+Перед стартом обновить зависимости eslint
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+npm run start
+npm run build
+
+
+ts-node-dev
+ts-node-dev nodemon
+
+
+npm run start
+npm run build
+
+.eslintignore
+node_modules
+src/**/*.js
+src\serviceWorker.js
+src\utils\api.js
+src\serviceWorker.js
+src\index.js
+src\contexts\CurrentUserContext.js
+src\components\Register.js
+src\components\ProtectedRoute.js
+src\components\PopupWithForm.js
+src\components\Main.js
+src\components\Login.js
+src\components\InfoTooltip.js
+src\components\ImagePopup.js
+src\components\Header.js
+
+
+7. Настройте хот-релоуд
+Сделайте так, чтобы сервер перезапускался при изменении файлов проекта. 
+Для этого установите пакет ts-node-dev. Приложение с хот релоудом должно запускаться командой: npm run dev 
+
+Глобально 
+npm install -g ts-node-dev
+
+Локально в проект
+npm install --save-dev ts-node-dev
+npm install --save-dev ts-node-dev peerDependencies
+
+npm i ts-node-dev
+npx install-peerdeps --dev ts-node-dev
+npm install ts-node-dev@2.0.0 node-notifier@* typescript@* --save-dev
+
+
+npm run dev 
+
+ "scripts": 
+    "dev": "ts-node-dev --respawn src/app.ts"
+
+npm install  --legacy-peer-deps
+npm fund
+npm fund
+npm audit
+npm audit fix
+
+npm run dev 
+
+
+
+
 
 
