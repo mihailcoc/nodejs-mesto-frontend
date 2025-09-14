@@ -263,10 +263,12 @@ npx install-peerdeps --dev eslint-plugin-import
 npm install --save-dev eslint @typescript-eslint/parser
 npx install-peerdeps --dev @typescript-eslint/parser
 npm install @typescript-eslint/parser@8.43.0 eslint@^9.0.0 typescript@<6.0.0 --save-dev
+npm install @typescript-eslint/parser@8.43.0 eslint@^9.0.0 --save-dev
 
 npm install --save-dev eslint @typescript-eslint/eslint-plugin
 npx install-peerdeps --dev @typescript-eslint/eslint-plugin
 npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 typescript@<6.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
+npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
 
 npm fund
 npm audit
@@ -343,16 +345,50 @@ npm run dev
  "scripts": 
     "dev": "ts-node-dev --respawn src/app.ts"
 
+npm install  --force
 npm install  --legacy-peer-deps
-npm fund
 npm fund
 npm audit
 npm audit fix
 
+
+npm run start
 npm run dev 
+npm run lint
+
+git add .
+git commit
+git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
+git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
 
 
+npm i bcrypt
+npm install bcrypt
+npm i --save-dev @types/bcrypt
+npm install --force
+npm install --legacy-peer-deps
+npm install bcrypt --force
+npm install bcrypt --legacy-peer-deps
+npm fund
+npm audit
+npm audit fix
 
 
+    // "@typescript-eslint/eslint-plugin": "^6.19.0",
+    // "@typescript-eslint/parser": "^5.62.0",
+Установить локально
+npm i --save-dev @typescript-eslint/eslint-plugin
+npm i --save-dev @typescript-eslint/parser
 
 
+npm install --save-dev eslint @typescript-eslint/parser
+npm install @typescript-eslint/parser --legacy-peer-deps
+npx install-peerdeps --dev @typescript-eslint/parser
+npm install @typescript-eslint/parser@8.43.0 eslint@^9.0.0 typescript@<6.0.0 --save-dev
+npm install @typescript-eslint/parser@8.43.0 eslint@^9.0.0 --save-dev
+
+npm install --save-dev eslint @typescript-eslint/eslint-plugin
+npm install @typescript-eslint/eslint-plugin --legacy-peer-deps
+npx install-peerdeps --dev @typescript-eslint/eslint-plugin
+npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 typescript@<6.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
+npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
