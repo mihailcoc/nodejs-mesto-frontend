@@ -3,7 +3,13 @@ import express from 'express';
 declare global {
   namespace Express {
     interface Request {
-      user?: Record<string, any>
+      user: {
+        _id: string;
+        name?:string;
+        about?:string;
+         avatar?:string;
+        email?:string;
+      }
     }
   }
 }

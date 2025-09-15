@@ -5,6 +5,7 @@ import validator from 'validator';
 import bcrypt from 'bcrypt';
 import validateUrl from '../utils/utils';
 import UnauthorizedError from '../errors/unauthorized-error';
+import { SCHEMA_NAMES } from '../utils/constants';
 
 interface IUser {
   name?: string;
@@ -66,4 +67,4 @@ userSchema.static('findUserByCredentials', function findUserByCredentials(email:
     });
 });
 
-export default model<IUser, UserModel>('user', userSchema);
+export default model<IUser, UserModel>(SCHEMA_NAMES.user, userSchema);

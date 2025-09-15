@@ -392,3 +392,10 @@ npm install @typescript-eslint/eslint-plugin --legacy-peer-deps
 npx install-peerdeps --dev @typescript-eslint/eslint-plugin
 npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 typescript@<6.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
 npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
+
+
+npm i express body-parser
+
+
+Почистить все зависимости и установить заново 
+npm clean-install

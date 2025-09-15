@@ -60,6 +60,5 @@ app.use(errors());
 app.use(errorMiddleware);
 
 app.listen(env.PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`App listening on port ${env.PORT}`);
 });
