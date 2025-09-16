@@ -11,7 +11,7 @@ export default (req: Request, res: Response, next: NextFunction) => {
   const token = authorization.replace('Bearer ', '');
   try {
     const payload = jwt.verify(token, env.JWT_SECRET) as JwtPayload;
-    req.user = payload;
+    req.user = payload as { _id: string };
     next();
   } catch (err) {
     next(new UnauthorizedError('Необходима авторизация'));

@@ -46,7 +46,7 @@ export const userSchema = new Schema<IUser, UserModel>({
   password: {
     type: String,
     required: true,
-    select: false,
+    select: false, // необходимо добавить поле select
   },
 });
 

@@ -15,7 +15,6 @@ import NotFoundErr from './errors/not-found-err';
 const app = express();
 
 mongoose.connect(env.DB_URL)
-  // eslint-disable-next-line no-console
   .then(() => console.log('MongoDB connected!'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
