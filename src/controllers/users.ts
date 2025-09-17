@@ -24,7 +24,9 @@ export const createUser = (
       const {
         name, about, avatar, email,
       } = user;
-      res.send(201);
+      res.status(201).send({
+        name, about, avatar, email,
+      });
     })
     .catch((err) => {
       if (err.name === 'CastError' || err.name === 'ValidationError') {

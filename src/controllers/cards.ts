@@ -21,7 +21,7 @@ export const createCard = (
   link: req.body.link,
   owner: req.user._id,
 })
-  .then((card) => res.send(201))
+  .then((card) => res.status(201).send(card))
   .catch((err) => {
     if (err.name === 'ValidationError') {
       next(new BadRequestErr('Переданы некорректные данные'));
