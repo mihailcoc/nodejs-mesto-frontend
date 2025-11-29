@@ -1,0 +1,42 @@
+version: '1'
+
+services:
+  # Node.js
+  app:
+    build:
+      context: ./backend
+      target: dev
+    tty: true
+    working_dir: /opt/server
+    volumes:
+      - ./backend:/opt/server
+      - ./static:/opt/static
+
+    expose:
+      - '3000'
+    depends_on:
+      - mongodb
+
+  # База данных
+  mongodb:
+    image: mongo:latest
+    ports:
+      - '27017'
+    volumes:
+      - ./mongo:/data/db
+
+
+  # Nginx
+  nginx:
+    container_name: proxy_nginx
+    depends_on:
+      - app
+      - mongodb
+
+    image: nginx:latest
+    ports:
+      - '8081:80'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./static:/var/www/static
+    restart: always
