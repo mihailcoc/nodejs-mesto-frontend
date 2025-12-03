@@ -1,0 +1,15 @@
+node_modules
+src/**/*.js
+src\serviceWorker.js
+src\utils\api.js
+src\serviceWorker.js
+src\index.js
+src\contexts\CurrentUserContext.js
+src\components\Register.js
+src\components\ProtectedRoute.js
+src\components\PopupWithForm.js
+src\components\Main.js
+src\components\Login.js
+src\components\InfoTooltip.js
+src\components\ImagePopup.js
+src\components\Header.js

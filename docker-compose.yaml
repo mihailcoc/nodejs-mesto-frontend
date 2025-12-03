@@ -1,16 +1,14 @@
-version: '1'
-
 services:
   # Node.js
   app:
     build:
-      context: ./backend
+      context: .
       target: dev
     tty: true
-    working_dir: /opt/server
+    working_dir: /app/
     volumes:
-      - ./backend:/opt/server
-      - ./static:/opt/static
+      - ./backend:/app/server
+      - ./static:/app/static
 
     expose:
       - '3000'

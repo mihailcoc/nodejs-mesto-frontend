@@ -1,3 +1,32 @@
+# Деплой приложения на сервер с использованием pm2
+
+IP адрес 158.160.183.138
+
+Frontend https://mike395.nomorepartiessbs.ru
+
+Backend https://api.mike395.nomorepartiessbs.ru
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Фронтенд проекта Mesto API
 Спринт 1
 
@@ -216,6 +245,8 @@ git commit
 git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
 git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
 
+Скопировать репозиторий с изменениями.
+git fetch https://github.com/mihailcoc/nodejs-mesto-frontend
 
 
 
@@ -356,11 +387,6 @@ npm run start
 npm run dev 
 npm run lint
 
-git add .
-git commit
-git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
-git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
-
 
 npm i bcrypt
 npm install bcrypt
@@ -393,10 +419,46 @@ npx install-peerdeps --dev @typescript-eslint/eslint-plugin
 npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 typescript@<6.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
 npm install @typescript-eslint/eslint-plugin@8.43.0 eslint@^9.0.0 @typescript-eslint/parser@^8.43.0 --save-dev
 
-
 npm i express body-parser
-
 
 Почистить все зависимости и установить заново 
 npm clean-install
 
+git add .
+git commit
+git push --force https://github.com/mihailcoc/nodejs-mesto-frontend
+git push --set-upstream https://github.com/mihailcoc/nodejs-mesto-frontend main
+
+Добавляем в наш проект изменения.
+git fetch https://github.com/mihailcoc/nodejs-mesto-frontend
+Достаем наш проект после изменений.
+git pull https://github.com/mihailcoc/nodejs-mesto-frontend
+
+Docker
+Сборка образов
+docker build . -t backend-mesto
+
+cd frontend
+docker build . -t frontend-mesto
+
+Генерируем ecosystem.config.js
+pm2 init simple
+
+ Запустить описанные приложения. Если оно уже запущено, то дубль создан не будет
+pm2 start ecosystem.config.js
+
+# Остановить все описанные в конфиге приложения
+pm2 stop ecosystem.config.js
+
+# Перезапустить все приложения
+pm2 restart ecosystem.config.js
+
+# Перезагрузить настройки экосистемы
+pm2 reload ecosystem.config.js
+
+# Удалить приложения из PM
+pm2 delete ecosystem.config.js 
+
+
+Подключиться к серверу
+ssh -l rozamund395 158.160.183.138
